@@ -10,80 +10,68 @@
 <link rel="manifest" href="manifest.webmanifest">
 <title>随手存 Video</title>
 <style>
-:root{color-scheme:dark;--bg:#101010;--panel:#1b1b1b;--panel2:#242424;--line:#333;--muted:#a4a4a4;--text:#f4f4f4;--accent:#d6f36a}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
-.wrap{max-width:760px;margin:auto;padding:22px 16px 48px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.brand{font-size:22px;font-weight:800;letter-spacing:-.5px}.brand span{color:var(--accent)}.tag{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:6px 9px;border-radius:30px}
-h1{font-size:29px;line-height:1.15;margin:8px 0}.sub{color:var(--muted);line-height:1.55;margin:0 0 22px}.tabs{display:flex;gap:8px;margin:22px 0 16px}.tab{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 14px;border-radius:12px;font-weight:650}.tab.active{background:var(--accent);color:#151515;border-color:var(--accent)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;margin:12px 0}.panel h2{font-size:17px;margin:0 0 12px}.field{width:100%;background:#101010;border:1px solid #3a3a3a;color:var(--text);border-radius:12px;padding:13px;font:inherit;outline:none}.field:focus{border-color:var(--accent)}textarea.field{min-height:76px;resize:vertical}.row{display:flex;gap:9px;margin-top:10px}.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:750;font-size:14px;background:var(--accent);color:#171717;cursor:pointer}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.danger{background:#392020;color:#ffb9b9}.hint{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 2px 0}.list{display:grid;gap:10px}.item{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:14px}.itemtop{display:flex;justify-content:space-between;gap:12px}.itemtitle{font-weight:700;overflow-wrap:anywhere}.itemmeta{color:var(--muted);font-size:12px;margin-top:6px}.itemactions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.small{font-size:12px;padding:8px 10px}.empty{padding:26px 14px;text-align:center;color:var(--muted);border:1px dashed #444;border-radius:15px;line-height:1.6}.hidden{display:none!important}video{width:100%;max-height:360px;border-radius:12px;background:#000;margin-top:12px}.notice{background:#282a1d;border:1px solid #4b512d;color:#dce9a8;border-radius:13px;padding:12px;font-size:12px;line-height:1.55;margin-top:14px}.stat{font-size:12px;color:var(--muted);margin:10px 2px}.foot{font-size:11px;color:#777;text-align:center;margin-top:28px;line-height:1.6}
+:root{color-scheme:dark;--bg:#101010;--panel:#1b1b1b;--panel2:#242424;--line:#333;--muted:#a4a4a4;--text:#f4f4f4;--accent:#d6f36a;--danger:#ffb9b9}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}.wrap{max-width:760px;margin:auto;padding:22px 16px 48px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.brand{font-size:22px;font-weight:800;letter-spacing:-.5px}.brand span{color:var(--accent)}.tag{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:6px 9px;border-radius:30px}h1{font-size:29px;line-height:1.15;margin:8px 0}.sub{color:var(--muted);line-height:1.55;margin:0 0 22px}.tabs{display:flex;gap:8px;margin:22px 0 16px}.tab{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 14px;border-radius:12px;font-weight:650}.tab.active{background:var(--accent);color:#151515;border-color:var(--accent)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;margin:12px 0}.panel h2{font-size:17px;margin:0 0 12px}.field{width:100%;background:#101010;border:1px solid #3a3a3a;color:var(--text);border-radius:12px;padding:13px;font:inherit;outline:none}.field:focus{border-color:var(--accent)}textarea.field{min-height:76px;resize:vertical}.row{display:flex;gap:9px;margin-top:10px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:750;font-size:14px;background:var(--accent);color:#171717;cursor:pointer}.btn:disabled{opacity:.55;cursor:wait}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.danger{background:#392020;color:#ffb9b9}.hint{font-size:12px;color:var(--muted);line-height:1.55;margin:10px 2px 0}.list{display:grid;gap:10px}.item{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:14px}.itemtop{display:flex;justify-content:space-between;gap:12px}.itemtitle{font-weight:700;overflow-wrap:anywhere}.itemmeta{color:var(--muted);font-size:12px;margin-top:6px}.itemactions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.small{font-size:12px;padding:8px 10px}.empty{padding:26px 14px;text-align:center;color:var(--muted);border:1px dashed #444;border-radius:15px;line-height:1.6}.hidden{display:none!important}video{width:100%;max-height:360px;border-radius:12px;background:#000;margin-top:12px}.notice{background:#282a1d;border:1px solid #4b512d;color:#dce9a8;border-radius:13px;padding:12px;font-size:12px;line-height:1.55;margin-top:14px}.status{font-size:13px;line-height:1.5;margin:10px 2px 0;color:var(--muted);overflow-wrap:anywhere}.status.error{color:var(--danger)}.stat{font-size:12px;color:var(--muted);margin:10px 2px}.foot{font-size:11px;color:#777;text-align:center;margin-top:28px;line-height:1.6}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top"><div class="brand">随手存<span>.</span> VIDEO</div><div class="tag">个人素材空间 · 本机优先</div></div>
   <h1>把灵感，<br>随手收好。</h1>
-  <p class="sub">收藏视频链接，整理本地素材。轻量、私密，适合在 iPhone 上使用。</p>
-  <div class="tabs">
-    <button class="tab active" data-tab="links">链接收藏</button>
-    <button class="tab" data-tab="library">本地视频库</button>
-    <button class="tab" data-tab="direct">直链下载</button>
-  </div>
-
-  <section id="links">
+  <p class="sub">下载可访问的视频文件并保存在本机浏览器，不转码、不压缩；也可整理链接和导入本地素材。</p>
+  <div class="tabs"><button class="tab active" data-tab="download">保存视频</button><button class="tab" data-tab="links">链接收藏</button><button class="tab" data-tab="library">本地视频库</button></div>
+  <section id="download">
     <div class="panel">
-      <h2>添加视频链接</h2>
-      <input id="url" class="field" placeholder="粘贴 Instagram / 其他视频链接" inputmode="url">
+      <h2>从视频文件链接保存</h2>
+      <input id="downloadUrl" class="field" placeholder="粘贴可直接访问的视频文件 URL" inputmode="url" autocomplete="url">
+      <input id="downloadName" class="field" style="margin-top:9px" placeholder="文件名（可选）">
+      <div class="row"><button class="btn" id="downloadButton">下载并保存到本机</button></div>
+      <div id="downloadStatus" class="status" role="status" aria-live="polite">完成后视频会出现在“本地视频库”，保存的是服务器返回的原始文件字节，不做转码或压缩。</div>
+      <div class="notice">重要限制：YouTube、Instagram 等分享页链接不是视频文件直链，静态网页应用无法通用地从这些页面提取视频；平台登录、跨域限制、DRM 或下载权限也不能绕过。请使用平台提供的下载/导出功能，或粘贴你有权访问的直接视频文件链接。原画质取决于来源文件本身。</div>
+      <p class="hint">需要目标服务器允许浏览器跨域读取（CORS）；下载内容会完整读入浏览器内存后存进本地数据库，大文件可能受设备存储及浏览器内存限制。请确认你有权保存该视频。</p>
+    </div>
+  </section>
+  <section id="links" class="hidden">
+    <div class="panel">
+      <h2>添加视频链接到收藏</h2>
+      <input id="url" class="field" placeholder="粘贴 YouTube / Instagram / 其他页面链接" inputmode="url">
       <input id="title" class="field" style="margin-top:9px" placeholder="给它起个名字（可选）">
       <textarea id="note" class="field" style="margin-top:9px" placeholder="备注：动作、镜头、剪辑节奏、灵感点……"></textarea>
       <div class="row"><button class="btn" id="saveLink">保存到收藏</button><button class="btn secondary" id="clearLink">清空</button></div>
-      <p class="hint">这里保存的是链接和备注，不会自动抓取 Instagram 视频文件。点击“打开原链接”可回到发布页面。</p>
+      <p class="hint">收藏只保存链接和备注，不会下载视频文件。</p>
     </div>
-    <div class="stat" id="linkCount"></div>
-    <div id="linkList" class="list"></div>
+    <div class="stat" id="linkCount"></div><div id="linkList" class="list"></div>
   </section>
-
   <section id="library" class="hidden">
-    <div class="panel">
-      <h2>导入本地视频</h2>
-      <input id="videoFiles" class="field" type="file" accept="video/*" multiple>
-      <p class="hint">选择 iPhone“照片”或“文件”中的视频。文件会存入此浏览器的本地数据库；请勿清除 Safari 网站数据，否则可能丢失。</p>
-    </div>
-    <div class="stat" id="videoCount"></div>
-    <div id="videoList" class="list"></div>
+    <div class="panel"><h2>导入本地视频</h2><input id="videoFiles" class="field" type="file" accept="video/*" multiple><p class="hint">选择设备中的视频文件，原文件存入此浏览器本地数据库。清除 Safari 网站数据可能导致丢失，请保留备份。</p></div>
+    <div class="stat" id="videoCount"></div><div id="videoList" class="list"></div>
   </section>
-
-  <section id="direct" class="hidden">
-    <div class="panel">
-      <h2>视频直链</h2>
-      <input id="directUrl" class="field" placeholder="粘贴你有权下载的 MP4 / 视频文件直链" inputmode="url">
-      <div class="row"><button class="btn" id="openDirect">打开视频链接</button></div>
-      <p class="hint">适用于网站明确提供的公开文件直链。部分网站会限制跨站下载或要求登录；遇到这种情况，请使用网站自身的下载功能。</p>
-      <div class="notice">使用边界：不破解私密内容、不绕过登录墙、DRM 或作者关闭的下载权限。对于没有官方下载入口的 Instagram Reel，请向作者索取原文件或请作者开放下载。</div>
-    </div>
-  </section>
-  <div class="foot">随手存 Video · 第一版<br>素材默认保存在当前设备和浏览器中，不会上传到本应用服务器。</div>
+  <div class="foot">随手存 Video · 视频保存在当前设备和浏览器中，不会上传到本应用服务器。</div>
 </div>
 <script>
-const DB_NAME='suishou-video-db', DB_VERSION=1;
-let db;
-function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains('links'))d.createObjectStore('links',{keyPath:'id'});if(!d.objectStoreNames.contains('videos'))d.createObjectStore('videos',{keyPath:'id'});};req.onsuccess=()=>{db=req.result;resolve(db)};req.onerror=()=>reject(req.error)})}
+const DB_NAME='suishou-video-db',DB_VERSION=1;let db;
+function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains('links'))d.createObjectStore('links',{keyPath:'id'});if(!d.objectStoreNames.contains('videos'))d.createObjectStore('videos',{keyPath:'id'})};req.onsuccess=()=>{db=req.result;resolve(db)};req.onerror=()=>reject(req.error)})}
 function store(name,mode='readonly'){return db.transaction(name,mode).objectStore(name)}
-function all(name){return new Promise((res,rej)=>{let r=store(name).getAll();r.onsuccess=()=>res(r.result.sort((a,b)=>b.created-a.created));r.onerror=()=>rej(r.error)})}
-function put(name,obj){return new Promise((res,rej)=>{let r=store(name,'readwrite').put(obj);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})}
-function del(name,id){return new Promise((res,rej)=>{let r=store(name,'readwrite').delete(id);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})}
+function all(name){return new Promise((resolve,reject)=>{const req=store(name).getAll();req.onsuccess=()=>resolve(req.result.sort((a,b)=>b.created-a.created));req.onerror=()=>reject(req.error)})}
+function put(name,obj){return new Promise((resolve,reject)=>{const req=store(name,'readwrite').put(obj);req.onsuccess=()=>resolve();req.onerror=()=>reject(req.error)})}
+function del(name,id){return new Promise((resolve,reject)=>{const req=store(name,'readwrite').delete(id);req.onsuccess=()=>resolve();req.onerror=()=>reject(req.error)})}
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=n=>n<1024*1024?(n/1024).toFixed(0)+' KB':(n/1024/1024).toFixed(1)+' MB';
-function validUrl(s){try{let u=new URL(s);return ['http:','https:'].includes(u.protocol)}catch{return false}}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));['links','library','direct'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==b.dataset.tab));});
-document.getElementById('saveLink').onclick=async()=>{let url=document.getElementById('url').value.trim();if(!validUrl(url)){alert('请粘贴有效的 http 或 https 链接');return}await put('links',{id:crypto.randomUUID(),url,title:document.getElementById('title').value.trim()||url,note:document.getElementById('note').value.trim(),created:Date.now()});document.getElementById('url').value='';document.getElementById('title').value='';document.getElementById('note').value='';renderLinks()};
+const fmt=n=>n<1048576?(n/1024).toFixed(0)+' KB':(n/1048576).toFixed(1)+' MB';
+function validUrl(s){try{const u=new URL(s);return ['http:','https:'].includes(u.protocol)}catch{return false}}
+function safeName(s){return String(s||'video').replace(/[\\/:*?"<>|\u0000-\u001f]/g,'_').trim().slice(0,160)||'video'}
+function filenameFromResponse(response,url){const cd=response.headers.get('content-disposition')||'';let m=cd.match(/filename\*=UTF-8''([^;]+)/i);if(m){try{return decodeURIComponent(m[1].replace(/^"|"$/g,''))}catch{}}m=cd.match(/filename="?([^";]+)"?/i);if(m)return m[1].trim();try{return decodeURIComponent(new URL(url).pathname.split('/').pop())||'video'}catch{return 'video'}}
+function extensionFromType(type){const map={'video/mp4':'mp4','video/webm':'webm','video/quicktime':'mov','video/x-matroska':'mkv','video/x-msvideo':'avi','video/mpeg':'mpeg'};return map[type]||''}
+document.querySelectorAll('.tab').forEach(button=>button.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===button));['download','links','library'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==button.dataset.tab))});
+document.getElementById('downloadButton').onclick=async()=>{const input=document.getElementById('downloadUrl'),nameInput=document.getElementById('downloadName'),button=document.getElementById('downloadButton'),status=document.getElementById('downloadStatus'),url=input.value.trim();status.classList.remove('error');if(!validUrl(url)){status.textContent='请粘贴有效的 http 或 https 视频文件链接。';status.classList.add('error');return}button.disabled=true;status.textContent='正在读取视频文件…请保持页面打开。';try{const response=await fetch(url,{mode:'cors',credentials:'omit',redirect:'follow'});if(!response.ok)throw new Error(`服务器返回 HTTP ${response.status}`);const type=(response.headers.get('content-type')||'').split(';')[0].trim().toLowerCase();if(type==='text/html'||type==='application/xhtml+xml')throw new Error('链接返回的是网页而不是视频文件。请使用直接视频文件链接，而不是 YouTube / Instagram 分享页面。');const blob=await response.blob();if(!blob.size)throw new Error('服务器返回了空文件。');if(type&&!type.startsWith('video/')&&!['application/octet-stream','binary/octet-stream'].includes(type))throw new Error(`返回内容类型为 ${type}，不是可识别的视频文件。`);let name=safeName(nameInput.value.trim()||filenameFromResponse(response,url));if(!/\.[a-z0-9]{2,5}$/i.test(name)){const ext=extensionFromType(type)||(/\.([a-z0-9]{2,5})(?:$|[?#])/i.exec(new URL(url).pathname)||[])[1]||'mp4';name+='.'+ext}await put('videos',{id:crypto.randomUUID(),name,size:blob.size,blob,created:Date.now(),type:blob.type||type});status.textContent=`保存成功：${name}（${fmt(blob.size)}）。文件已原样保存到“本地视频库”。`;input.value='';nameInput.value='';await renderVideos()}catch(error){let message=error.name==='TypeError'?'浏览器无法读取该链接：可能是跨域（CORS）限制、网络错误，或它并非公开直链。此静态应用不能提取社交平台分享页中的视频。':(error.message||'下载失败。');status.textContent=message;status.classList.add('error')}finally{button.disabled=false}};
+document.getElementById('saveLink').onclick=async()=>{const url=document.getElementById('url').value.trim();if(!validUrl(url)){alert('请粘贴有效的 http 或 https 链接');return}await put('links',{id:crypto.randomUUID(),url,title:document.getElementById('title').value.trim()||url,note:document.getElementById('note').value.trim(),created:Date.now()});['url','title','note'].forEach(id=>document.getElementById(id).value='');renderLinks()};
 document.getElementById('clearLink').onclick=()=>['url','title','note'].forEach(id=>document.getElementById(id).value='');
-async function renderLinks(){let items=await all('links');document.getElementById('linkCount').textContent=`已收藏 ${items.length} 条链接`;let el=document.getElementById('linkList');el.innerHTML=items.length?items.map(x=>`<div class="item"><div class="itemtop"><div><div class="itemtitle">${esc(x.title)}</div><div class="itemmeta">${new Date(x.created).toLocaleString()}</div></div></div><div class="itemmeta" style="overflow-wrap:anywhere">${esc(x.url)}</div>${x.note?`<p class="hint">${esc(x.note)}</p>`:''}<div class="itemactions"><button class="btn small" onclick="window.open(${JSON.stringify(x.url)},'_blank','noopener')">打开原链接</button><button class="btn secondary small" onclick="copyText(${JSON.stringify(x.url)})">复制链接</button><button class="btn danger small" onclick="removeItem('links',${JSON.stringify(x.id)})">删除</button></div></div>`).join(''):'<div class="empty">还没有收藏。<br>把想研究的视频链接粘贴到上方。</div>'}
-async function renderVideos(){let items=await all('videos');document.getElementById('videoCount').textContent=`本地保存 ${items.length} 个视频`;let el=document.getElementById('videoList');el.innerHTML=items.length?items.map(x=>`<div class="item"><div class="itemtitle">${esc(x.name)}</div><div class="itemmeta">${fmt(x.size)} · ${new Date(x.created).toLocaleString()}</div><video controls playsinline preload="metadata" src="${URL.createObjectURL(x.blob)}"></video><div class="itemactions"><button class="btn secondary small" onclick="downloadVideo(${JSON.stringify(x.id)})">导出视频</button><button class="btn danger small" onclick="removeItem('videos',${JSON.stringify(x.id)})">删除</button></div></div>`).join(''):'<div class="empty">本地视频库还是空的。<br>导入你已拥有或获准保存的视频文件。</div>'}
+async function renderLinks(){const items=await all('links');document.getElementById('linkCount').textContent=`已收藏 ${items.length} 条链接`;document.getElementById('linkList').innerHTML=items.length?items.map(x=>`<div class="item"><div class="itemtitle">${esc(x.title)}</div><div class="itemmeta">${new Date(x.created).toLocaleString()}</div><div class="itemmeta" style="overflow-wrap:anywhere">${esc(x.url)}</div>${x.note?`<p class="hint">${esc(x.note)}</p>`:''}<div class="itemactions"><button class="btn secondary small" onclick="window.open(${JSON.stringify(x.url)},'_blank','noopener')">打开原链接</button><button class="btn secondary small" onclick="copyText(${JSON.stringify(x.url)})">复制链接</button><button class="btn danger small" onclick="removeItem('links',${JSON.stringify(x.id)})">删除</button></div></div>`).join(''):'<div class="empty">还没有收藏链接。</div>'}
+async function renderVideos(){const items=await all('videos');document.getElementById('videoCount').textContent=`本地保存 ${items.length} 个视频`;document.getElementById('videoList').innerHTML=items.length?items.map(x=>`<div class="item"><div class="itemtitle">${esc(x.name)}</div><div class="itemmeta">${fmt(x.size)} · ${new Date(x.created).toLocaleString()}</div><video controls playsinline preload="metadata" src="${URL.createObjectURL(x.blob)}"></video><div class="itemactions"><button class="btn secondary small" onclick="downloadVideo(${JSON.stringify(x.id)})">导出文件</button><button class="btn danger small" onclick="removeItem('videos',${JSON.stringify(x.id)})">删除</button></div></div>`).join(''):'<div class="empty">本地视频库还是空的。<br>可用“保存视频”下载直链，或导入设备中的视频。</div>'}
 window.removeItem=async(name,id)=>{if(confirm('确定删除这条素材吗？')){await del(name,id);name==='links'?renderLinks():renderVideos()}};
-window.copyText=async(s)=>{try{await navigator.clipboard.writeText(s);alert('已复制')}catch{prompt('复制下面的链接',s)}};
-window.downloadVideo=async(id)=>{let x=(await all('videos')).find(v=>v.id===id);if(!x)return;let u=URL.createObjectURL(x.blob),a=document.createElement('a');a.href=u;a.download=x.name;a.click();setTimeout(()=>URL.revokeObjectURL(u),3000)};
-document.getElementById('videoFiles').onchange=async e=>{for(const f of e.target.files){if(!f.type.startsWith('video/'))continue;await put('videos',{id:crypto.randomUUID(),name:f.name,size:f.size,blob:f,created:Date.now()})}e.target.value='';renderVideos()};
-document.getElementById('openDirect').onclick=()=>{let u=document.getElementById('directUrl').value.trim();if(!validUrl(u)){alert('请粘贴有效的视频文件链接');return}window.open(u,'_blank','noopener')};
-openDB().then(()=>{renderLinks();renderVideos()}).catch(()=>alert('本地数据库无法启动，请使用 Safari 或 Chrome 打开，并确认未处于无痕模式。'));
-if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+window.copyText=async text=>{try{await navigator.clipboard.writeText(text);alert('已复制')}catch{prompt('复制下面的链接',text)}};
+window.downloadVideo=async id=>{const video=(await all('videos')).find(x=>x.id===id);if(!video)return;const url=URL.createObjectURL(video.blob),a=document.createElement('a');a.href=url;a.download=video.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)};
+document.getElementById('videoFiles').onchange=async event=>{for(const file of event.target.files){if(!file.type.startsWith('video/'))continue;await put('videos',{id:crypto.randomUUID(),name:file.name,size:file.size,blob:file,created:Date.now(),type:file.type})}event.target.value='';renderVideos()};
+openDB().then(()=>Promise.all([renderLinks(),renderVideos()])).catch(()=>alert('本地数据库无法启动，请使用 Safari 或 Chrome 打开，并确认未处于无痕模式。'));
+if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script>
-</body></html>
+</body>
+</html>
